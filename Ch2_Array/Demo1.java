@@ -11,6 +11,7 @@ public class Demo1 {
         int sum = marks1+marks2+marks3+marks4+marks5;
         System.out.println(sum);
 
+        // Array is collection of data types/Variable
         int marks[] = {25,69,78,23,85};
         int sum1 = 0;
         for(int i = 0; i<marks.length; i++)
