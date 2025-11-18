@@ -1,4 +1,4 @@
-package Sorting_Algo;
+package Ch3_Sorting_Algo;
 
 public class Bubble_Sort {
 
