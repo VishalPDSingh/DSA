@@ -2,7 +2,7 @@ package ch1_Control_Statements;
 
 import java.util.Scanner;
 
-public class ch9_CheckVowelAndConsonant {
+public class Q9_CheckVowelAndConsonant {
 
     public static void checkAlphabet(char ch) {
         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
