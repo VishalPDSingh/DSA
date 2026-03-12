@@ -10,7 +10,7 @@ public class Q4_Triangle {
             for (int j = 1; j <= nst; j++) {
                 System.out.print("*");
             }
-            // prep for next rowF
+            // prep for next row
             nst = nst + 1; // nst++
             System.out.println("");
         }
