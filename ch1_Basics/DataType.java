@@ -2,22 +2,33 @@ package ch1_Basics;
 
 public class DataType {
     public static void main(String[] args) {
-        int x = 15;
-        int y = 10;
-        int sum = x + y;
-        System.out.println("sum of " + x + " and " + y + " is " + sum);
-        int pro = x * y;
-        System.out.println("sum of " + x + " and " + y + " is " + pro);
 
-        int div = x / y;
-        System.out.println("sum of " + x + " and " + y + " is " + div);
-        int div1 = y / x;
-        System.out.println("sum of " + x + " and " + y + " is " + div1);
+        // Integer Data Type
+        int x = 100;
+        System.out.println(x);
 
-        int mod = x % y;
-        System.out.println("sum of " + x + " and " + y + " is " + mod);
+        byte b = 51;
+        System.out.println(b);
 
-        int bod = (x*y)/(x+y);
-         System.out.println("sum of "+x+" and "+y+ " is "+bod);
+        short s = 895;
+        System.out.println(s);
+
+        long l = 125;
+        System.out.println(l);
+
+        // float
+        float f = 45.56f;
+        System.out.println(f);
+
+        double d = 4569.26;
+        System.out.println(d);
+
+        // character
+        char c = 'A';
+        System.out.println(c);
+
+        // boolean
+        Boolean bo = true;
+        System.out.println(bo);
     }
 }
