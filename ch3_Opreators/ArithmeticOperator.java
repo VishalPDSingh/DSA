@@ -46,6 +46,16 @@ public class ArithmeticOperator {
         int mod = modulus(a, b);
         System.out.println(mod);
 
+
+        System.out.println("-----------------------------------");
+        int n1 = 10;
+        int n2 = 20;
+        int res = n1+n2;
+        System.out.println(res);
+
+
+        // modulo operator %
+        
         sc.close();
     }
 }
