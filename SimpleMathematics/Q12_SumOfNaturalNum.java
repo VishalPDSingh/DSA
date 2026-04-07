@@ -2,14 +2,15 @@ package SimpleMathematics;
 
 import java.util.Scanner;
 
-public class Q10_CountDigit {
-    public static int countDigit(int n) {
-        int count = 0;
-        while (n > 0) {
-            n /= 10;
-            count++;
+public class Q12_SumOfNaturalNum {
+    static int sumOfNatural(int n) {
+        if (n == 0)
+            return 0;
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum = sum + i;
         }
-        return count;
+        return sum;
     }
 
     public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class Q10_CountDigit {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int res = countDigit(n);
+        int res = sumOfNatural(n);
         System.out.println(res);
         sc.close();
     }

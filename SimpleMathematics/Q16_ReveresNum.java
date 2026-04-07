@@ -2,14 +2,15 @@ package SimpleMathematics;
 
 import java.util.Scanner;
 
-public class Q10_CountDigit {
-    public static int countDigit(int n) {
-        int count = 0;
+public class Q16_ReveresNum {
+    static void reverse(int n) {
+        int rev = 0;
         while (n > 0) {
+            int r = n % 10;
+            rev = rev * 10 + r;
             n /= 10;
-            count++;
         }
-        return count;
+        System.out.println(rev);
     }
 
     public static void main(String[] args) {
@@ -18,8 +19,8 @@ public class Q10_CountDigit {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int res = countDigit(n);
-        System.out.println(res);
+        reverse(n);
         sc.close();
+
     }
 }

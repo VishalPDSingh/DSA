@@ -18,6 +18,6 @@ public class Q11_MultiplicationTable {
 
         int n = sc.nextInt();
         table(n);
-
+        sc.close();
     }
 }
