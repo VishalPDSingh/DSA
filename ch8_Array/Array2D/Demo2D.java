@@ -3,8 +3,8 @@ package ch8_Array.Array2D;
 public class Demo2D {
     public static void main(String[] args) {
 
-        int arr[][];// Declaration
-        arr = new int[4][5]; // Initialization
+      //  int arr[][];// Declaration
+      //  arr = new int[4][5]; // Initialization
 
         // print the rowwise // Direct Initialization
         int mat[][] = { { 10, 20, 30, 40, 50 },
