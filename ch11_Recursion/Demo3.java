@@ -1,20 +1,21 @@
 package ch11_Recursion;
 
-// Sum of natural number
+// print natural number
 
-public class Demo2 {
-    static int sum(int n) {
+public class Demo3 {
+    static int printNum(int n) {
         if (n == 0)
             return 0;
         if (n == 1)
             return 1;
-        int y = sum(n - 1) + n;
+        System.out.println(n);
+        int y = printNum(n - 1);
         return y;
     }
 
     public static void main(String[] args) {
 
-        int res = sum(20);
+        int res = printNum(10);
         System.out.println(res);
     }
 }
