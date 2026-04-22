@@ -25,7 +25,7 @@ public class Demo1 {
         System.out.println((char) ch1);
 
         char ch2 = 'A';
-        ch2 = ch2 + 3; // error
+      //  ch2 = ch2 + 3; // error
         System.out.println(ch2);
     }
 }

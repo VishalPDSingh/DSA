@@ -8,7 +8,7 @@ public class Demo1 {
         String s1 = "Java";
         // method 3 char to String 
         char[]c = {'a','b','c','d'};
-        String s = new String(c);
+        String s2 = new String(c);
 
         // Different way to Compare String
         
