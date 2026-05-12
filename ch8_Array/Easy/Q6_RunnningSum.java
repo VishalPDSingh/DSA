@@ -4,20 +4,17 @@ public class Q6_RunnningSum {
     static int[] runningSum(int arr[]) {
         int nums[] = new int[arr.length];
         int sum = 0;
-
         for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
+            sum = sum + arr[i];
             nums[i] = sum;
         }
-
         return nums;
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 3, 4 };
+        int arr[] = { 10, 20, 30, 70, 65 };
         int ans[] = runningSum(arr);
-
-        for (int num : ans)
-            System.out.println(num);
+        for (int res : ans)
+            System.out.println(res);
     }
 }

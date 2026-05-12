@@ -1,6 +1,7 @@
 package ch8_Array.Easy;
 
 public class Q2_SecondLargestNum {
+
     static int secondLargestNum(int arr[]) {
         int max = Integer.MIN_VALUE;
         int secMax = Integer.MIN_VALUE;
@@ -20,8 +21,8 @@ public class Q2_SecondLargestNum {
 
     public static void main(String[] args) {
 
-        int arr[] = { 10, 10, 10 };
-        int res = secondLargestNum(arr);
-        System.out.println(res);
+        int arr[] = { 1, 2, 3, 4, 5 };
+        int ans = secondLargestNum(arr);
+        System.out.println(ans);
     }
 }

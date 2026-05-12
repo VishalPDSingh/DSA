@@ -1,22 +1,25 @@
 package ch8_Array.Easy;
 
 public class Q5_ConcatenationOfArray {
-    static int[] concatenation(int arr[]) {
-        int n = arr.length;
-        int ans[] = new int[2 * n];
 
-        for (int i = 0; i < n; i++) {
-            ans[i] = arr[i];
-            ans[i + n] = arr[i];
+    static int[] getConcatenation(int nums[])
+    {
+        int n = nums.length;
+        int ans[] = new int[n*2];
+
+        for(int i=0; i<n; i++)
+        {
+            ans[i] = nums[i];
+            ans[i+n] = nums[i];
         }
         return ans;
     }
 
     public static void main(String[] args) {
 
-        int arr[] = { 1, 2, 1 };
-        int res[] = concatenation(arr);
-        for (int ans : res)
-            System.out.println(ans);
+       int nums[] = {1,2,1};
+       int res[] = getConcatenation(nums);
+       for(int ans:res)
+        System.out.println(ans);
     }
 }
