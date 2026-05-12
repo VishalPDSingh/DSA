@@ -1,6 +1,7 @@
 package ch8_Array.Easy;
 
 public class Q7_PrefixSum {
+    // Brute force
     static int[] prefixSum(int arr[]) {
         int pf[] = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -12,7 +13,8 @@ public class Q7_PrefixSum {
         }
         return pf;
     }
-
+// ------------------------------------------------------------
+// optimal solution
     static int[] prefixSumOptiaml(int arr[]) {
         int pf[] = new int[arr.length];
         pf[0] = arr[0];
