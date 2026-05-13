@@ -1,25 +1,29 @@
 package ch8_Array.Easy;
 
 /*
- * Print Sum of All Subarrays using Prefix Sum
+ * Sum of All Subarrays using Prefix Sum
  * 
  * Problem:
- * Print the sum of every possible subarray.
+ * Find the total sum of all possible subarrays.
  * 
  * ---------------------------------------------------
  * Example:
- * arr = {1,2,3}
+ * arr = {5, 3, -1, 8}
  * 
- * Subarrays and their sums:
+ * All Subarrays:
  * 
- * {1}       -> 1
- * {1,2}     -> 3
- * {1,2,3}   -> 6
+ * {5}            = 5
+ * {5,3}          = 8
+ * {5,3,-1}       = 7
+ * {5,3,-1,8}     = 15
+ * {3}            = 3
+ * {3,-1}         = 2
+ * {3,-1,8}       = 10
+ * {-1}           = -1
+ * {-1,8}         = 7
+ * {8}            = 8
  * 
- * {2}       -> 2
- * {2,3}     -> 5
- * 
- * {3}       -> 3
+ * Total Sum = 64
  * ---------------------------------------------------
  * 
  * Prefix Sum Logic:
@@ -27,18 +31,16 @@ package ch8_Array.Easy;
  * Prefix Sum Formula:
  * pf[i] = pf[i-1] + arr[i]
  * 
- * ---------------------------------------------------
- * Subarray Sum Formula:
- * 
- * Sum from i to j:
+ * Using prefix sum,
+ * subarray sum from i to j:
  * 
  * If i == 0:
  * sum = pf[j]
  * 
  * Else:
  * sum = pf[j] - pf[i-1]
- * ---------------------------------------------------
  * 
+ * ---------------------------------------------------
  * Time Complexity:
  * O(n²)
  * 
@@ -46,7 +48,7 @@ package ch8_Array.Easy;
  * O(n)
  */
 
-public class Q16_SubArrayPrefixSum {
+public class Q17_SubArrayDemo2 {
 
     // ---------------------------------------------------
     // Create Prefix Sum Array
@@ -68,12 +70,14 @@ public class Q16_SubArrayPrefixSum {
     }
 
     // ---------------------------------------------------
-    // Print Sum of All Subarrays
+    // Find Sum of All Subarrays
     // ---------------------------------------------------
     static void subArraySum(int arr[]) {
 
         // Create prefix sum array
         int pf[] = prefixSumOptimal(arr);
+
+        int ans = 0;
 
         /*
          * i -> starting index
@@ -87,24 +91,23 @@ public class Q16_SubArrayPrefixSum {
                 // If subarray starts from index 0
                 if (i == 0) {
 
-                    System.out.println(pf[j]);
+                    ans = ans + pf[j];
                 }
 
                 // General case
                 else {
 
-                    System.out.println(pf[j] - pf[i - 1]);
+                    ans = ans + (pf[j] - pf[i - 1]);
                 }
             }
-
-            // New line after each starting index
-            System.out.println();
         }
+
+        System.out.println(ans);
     }
 
     public static void main(String[] args) {
 
-        int arr[] = { 1, 2, 3, 4, 5 };
+        int arr[] = { 5, 3, -1, 8 };
 
         subArraySum(arr);
     }
