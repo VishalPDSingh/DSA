@@ -47,6 +47,8 @@ package ch10_NumberSystem.BitManipulation;
  * 
  * Time Complexity:
  * O(1)
+ * 
+ * to Calculate 2^n use left shif operator
  */
 
 public class Demo4LeftShift {
