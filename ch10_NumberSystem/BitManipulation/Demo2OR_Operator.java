@@ -5,5 +5,9 @@ public class Demo2OR_Operator {
 
         System.out.println(23 | 10);
         System.out.println(20 | 10);
+
+        System.out.println(10 | 0);
+
+        System.out.println(10 | 10);
     }
 }

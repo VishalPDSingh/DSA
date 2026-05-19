@@ -6,6 +6,9 @@ public class Demo1AND_Operator {
         System.out.println(23 & 10);
         System.out.println(20 & 10);
 
-        
+        System.out.println( 100 & 100);
+
+        System.out.println(100 & 100 & 100);
+        System.out.println(10 & 0);
     }
 }
