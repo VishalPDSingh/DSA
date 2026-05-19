@@ -107,7 +107,7 @@ public class Q11_ProductOfArrayDemo1 {
 
     public static void main(String[] args) {
 
-        int arr[] = { 1, 2, 3, 4 };
+        int arr[] = { 5,2,3,7,5 };
 
         int res[] = productExceptItself(arr);
 
