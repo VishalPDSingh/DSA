@@ -114,7 +114,7 @@ public class StringConcatenationDemo1 {
 
         // One variable involved -> runtime concatenation
         // Created in Heap Memory
-        String s7 = "Vishal" + s2;
+        //String s7 = "Vishal" + s2;
 
 
         // ====================================================
