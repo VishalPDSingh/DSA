@@ -1,21 +1,19 @@
 package ch10_NumberSystem.BitManipulation;
 
 /*
- * Set the ith Bit
+ * Flip (Toggle) the ith Bit
  * 
  * ---------------------------------------------------
  * Problem:
  * 
- * Turn ON the ith bit of number N.
+ * Change ith bit:
  * 
- * ---------------------------------------------------
- * Cases:
+ * 0 → 1
+ * 1 → 0
  * 
- * If ith bit already = 1
- * → No change
+ * This is called:
  * 
- * If ith bit = 0
- * → Make it 1
+ * Flip / Toggle Bit
  * ---------------------------------------------------
  * 
  * Example:
@@ -30,7 +28,7 @@ package ch10_NumberSystem.BitManipulation;
  * 
  * 4th bit = 0
  * 
- * After setting:
+ * After flip:
  * 
  * 111101
  * 
@@ -38,35 +36,47 @@ package ch10_NumberSystem.BitManipulation;
  * 61
  * ---------------------------------------------------
  * 
+ * Another Example:
+ * 
+ * If bit already = 1
+ * 
+ * then:
+ * 
+ * 1 → 0
+ * ---------------------------------------------------
+ * 
  * Main Logic:
  * 
- * Create a mask where only ith bit is 1.
+ * Create mask where only ith bit is ON.
  * 
  * Formula:
  * 
  * (1 << i)
  * 
  * ---------------------------------------------------
- * Then use OR operation:
+ * Then perform XOR:
  * 
- * n | (1 << i)
+ * n ^ (1 << i)
  * 
  * ---------------------------------------------------
- * Why OR works?
+ * Why XOR works?
  * 
- * OR Truth Table:
+ * XOR Truth Table:
  * 
- * 0 | 0 = 0
- * 0 | 1 = 1
- * 1 | 0 = 1
- * 1 | 1 = 1
+ * 0 ^ 0 = 0
+ * 0 ^ 1 = 1
+ * 1 ^ 0 = 1
+ * 1 ^ 1 = 0
  * 
  * ---------------------------------------------------
  * Important:
  * 
- * OR with 1 always gives 1.
+ * XOR with 1 flips the bit.
  * 
- * Therefore ith bit becomes SET.
+ * Therefore:
+ * 
+ * 0 becomes 1
+ * 1 becomes 0
  * ---------------------------------------------------
  * 
  * Time Complexity:
@@ -76,19 +86,19 @@ package ch10_NumberSystem.BitManipulation;
  * O(1)
  */
 
-public class Q4_SetThe_ithBit {
+public class Q5_Filp_iTh_Bit {
 
-    static int setBit(int n, int i) {
+    static int filpBit(int n, int i) {
 
         /*
          * Create mask:
          * 
          * 1 << i
          * 
-         * Then perform OR operation.
+         * Then XOR with n
          */
 
-        int ans = n | (1 << i);
+        int ans = n ^ (1 << i);
 
         return ans;
     }
@@ -99,7 +109,7 @@ public class Q4_SetThe_ithBit {
 
         int i = 4;
 
-        int ans = setBit(n, i);
+        int ans = filpBit(n, i);
 
         System.out.println(ans);
     }
