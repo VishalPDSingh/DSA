@@ -93,8 +93,10 @@ public class Q3_CheckNum_SetOrNot {
     static boolean checkBits1(int n, int i) {
 
         String binary = Integer.toBinaryString(n);
-
+        System.out.println("Binary Number is: " + binary);
         // Reverse indexing from right side
+        // Right-side bit position → Left-side string index
+        // To move from bit position → string index:index = length - 1 - bitPosition
         int index = binary.length() - 1 - i;
 
         // If index goes outside
