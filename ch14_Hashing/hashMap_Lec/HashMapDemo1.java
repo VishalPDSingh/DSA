@@ -1,6 +1,6 @@
 package ch14_Hashing.hashMap_Lec;
 
-public class HashMapDemo {
+public class HashMapDemo1 {
     public static void main(String[] args) {
         // hash code
         String name = "Visalh";
